@@ -6,7 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "lint": "eslint .",
-    "format": "prettier --write ."
+    "format": "prettier --write .",
+    "prepare": "husky"
   },
   "repository": {
     "type": "git",
@@ -20,6 +21,10 @@
     "url": "https://github.com/bobscrew/clean-code-todo/issues"
   },
   "homepage": "https://github.com/bobscrew/clean-code-todo#readme",
+  "lint-staged": {
+    "*.js": "eslint",
+    "*.{html,css,js,json,md}": "prettier --check"
+  },
   "devDependencies": {
     "@eslint/js": "^10.0.1",
     "eslint": "^10.13.0",
